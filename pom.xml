@@ -8,7 +8,20 @@
     <artifactId>bus-booking-app</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-
+	<repositories>
+		<repository>
+		  <id>jfrog-artifactory</id> <!-- Unique identifier for this repository -->
+		  <url>https://your-artifactory-instance/artifactory/repository-name</url> <!-- Replace with your Artifactory URL -->
+		  <releases>
+			<enabled>true</enabled>
+			<updatePolicy>always</updatePolicy>
+		  </releases>
+		  <snapshots>
+			<enabled>true</enabled>
+			<updatePolicy>always</updatePolicy>
+		  </snapshots>
+		</repository>
+  	</repositories>
     <!-- Parent for Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
